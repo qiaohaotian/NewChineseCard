@@ -27,6 +27,7 @@ public class Server {
 			count++;
 		}
 		table.start();
+		server.close();
 	}
 
 	public static void main(String args[]) throws IOException {

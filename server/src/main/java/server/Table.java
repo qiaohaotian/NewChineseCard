@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 import org.omg.CORBA.portable.OutputStream;
 
+import static server.Win.ishule;
+
 public class Table {
 	private ArrayList<Player> players;
 	private ArrayList<Socket> sockets = new ArrayList<Socket>();
@@ -48,7 +50,7 @@ public class Table {
 				out.writeUTF(outStr);
 				out.flush();
 				}
-			while (cardset.getsize() > 0/* 桌面上还有牌可抓且没有玩家胡了 */) {
+			while (cardset.getsize() > 0 && !ishule(players.get(turn).gethandcards())/* 桌面上还有牌可抓且没有玩家胡了 */) {
 				// if判断是不是第一个以及玩家行动
 				DataInputStream in = new DataInputStream(sockets.get(turn).getInputStream());
 				DataOutputStream out = new DataOutputStream(sockets.get(turn).getOutputStream());

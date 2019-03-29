@@ -23,7 +23,7 @@ public class Card {
 		return no;
 	}
 
-	public boolean equal(Card other) {
+	public boolean issame(Card other) {
 		return this.color.equals(other.getColor()) && this.number.equals(other.getNumber());
 	}
 

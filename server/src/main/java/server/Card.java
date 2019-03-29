@@ -21,7 +21,7 @@ public class Card {
 	public int getNo(){
 		return no;
 	}
-	public boolean equal(Card other){
+	public boolean issame(Card other){
 		return this.color.equals(other.getColor()) && this.number.equals(other.getNumber());
 	}
 	public boolean biggerthan(Card other){

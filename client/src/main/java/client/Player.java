@@ -25,4 +25,7 @@ public class Player {
 		Card deleted = handcards.remove(a - 1);
 		return deleted;
 	}
+	public ArrayList<Card> getHandcards(){
+		return handcards;
+	}
 }
